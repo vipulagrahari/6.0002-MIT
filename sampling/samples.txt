@@ -1,0 +1,9 @@
+Gebremariam Gebregziabher,M,27,14,ETH,142.93
+Matebo Levy,M,22,2,KEN,133.10
+Cherop Sharon,F,28,1,KEN,151.83
+Chebet Wilson,M,26,5,KEN,134.93
+Dado Firehiwot,F,28,4,ETH,154.93
+Korir Laban,M,26,6,KEN,135.48
+Jeptoo Rita,F,31,6,KEN,155.88
+Korir Wesley,M,29,1,KEN,132.67
+Kipyego Bernard,M,25,3,KEN,133.22

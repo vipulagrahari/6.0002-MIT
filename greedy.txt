@@ -1,0 +1,51 @@
+class food(object):
+	def __init__(self, n, v, w):
+		self.name = n
+		self.value = v
+		self.calories = w
+
+	def get_name(self):
+		return self.name 
+	def get_value(self):
+		return self.value
+	def get_cost(self):
+		return self.calories
+	def density(self):
+		return self.get_value()/self.get_cost()
+	def _str_(self):
+		return self.name + ':<' + str(self.value) + ',' + str(self.calories) + '>'
+	
+
+def greedy(items, maxCost, keyfunction):
+	itemsCopy = sorted(items, key = keyfunction, reverse = True)
+
+	record = []
+
+	totalValue, totalCost = 0.0, 0.0
+
+	for i in len(itemsCopy):
+		if (totalCost+itemsCopy[i].get_cost()) <= maxCost:
+			record.append(itemsCopy[i])
+			totalCost += itemsCopy[i].get_cost()
+			totalValue += itemsCopy[i].get_value()
+
+	return(record, totalValue)
+
+	def testGreedy(items, constraint, keyfunction):
+		taken, val = greedy(items, constraint, keyfunction)
+		print("Value for this constraint is:", val)
+		for item in taken:
+			print("		", items)
+
+	def testGreedys(maxUnits):
+		print("Use Greedy by value to allocate", maxUnits, "calories")
+		testGreedy(foods, maxUnits, faoods.get_value())
+		
+		print("\nUse Greedy by cost to allocate", maxUnits, "calories")
+		testGreedy(foods, maxUnits, lambda x: 1/foods.get_cost())
+
+		print("\nUse Greedy by density to allocate", maxUnits, "calories")
+		testGreedy(foods, maxUnits, foods.density)
+
+
+

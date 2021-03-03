@@ -1,0 +1,21 @@
+import random
+import pylab
+import numpy
+
+def generate_data(filename, num_trials):
+    for x in range(num_trials):
+        with open(filename, 'w') as infile:
+
+            infile.write("{} {}".format(x, y))
+
+def get_data(filename):
+    distances = []
+    masses = []
+    with open(filename, 'r') as infile:
+        for line in infile:
+            words = line.split(' ')
+            distances.append(words[0])
+            masses.append(words[1])
+
+    return distances, masses
+
